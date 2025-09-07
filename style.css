@@ -622,6 +622,9 @@ footer {
         object-fit: cover;
         transition: transform 0.5s ease;
     }
+    .menu-item h3 {
+        font-size:20px;
+        }
 }
 
 #promotions {
