@@ -542,6 +542,7 @@ a {
     height: 370px;
     border: none;
     border-radius: 8px;
+      cursor: url('img/cursor32.png'), auto;
 }
 
 footer {
@@ -666,5 +667,6 @@ footer {
     }
 
 }
+
 
 
