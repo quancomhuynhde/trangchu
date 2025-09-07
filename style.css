@@ -573,7 +573,7 @@ footer {
     margin-top: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav {
         display: none;
     }
