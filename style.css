@@ -577,7 +577,7 @@ footer {
     nav {
         display: none;
     }
-        html, body {
+        .hero, .section, .menu {
         overflow-x: hidden !important;
     }
    .hero {
