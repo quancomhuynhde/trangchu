@@ -578,7 +578,7 @@ footer {
         display: none;
     }
    .hero {
-        height: 100vh; 
+        height: 500px; 
         background-attachment: scroll; 
         background-size: cover;       
         background-position: center;  
