@@ -577,7 +577,7 @@ footer {
     nav {
         display: none;
     }
-    body { overflow-x:none; }
+    body { overflow-x:hidden; }
    .hero {
         height: 400px; 
         background-attachment: scroll; 
