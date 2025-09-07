@@ -1,312 +1,689 @@
-<!DOCTYPE html>
-<html lang="vi">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cơm Huynh Đệ - Quán Cơm Ngon, Giá Rẻ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+body {
+    background: #fffaf0;
+    color: #333;
+    line-height: 1.6;
+    cursor: url('img/cursor32.png'), auto;
 
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
-<body>
-    <div class="call-wrapper">
-        <a href="tel:0862707346" class="call-button">
-            <span class="wave"></span>
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-        <p>Đang tải...</p>
-    </div>
-    <!-- Nút lên đầu trang -->
-    <button id="backToTopBtn" class="back-to-top-btn">↑</button>
-    <!-- Header -->
-    <header>
-        <div class="HuynhDe">
-        <a href="#">
-            <h1 class="brand">
-                Cơm Huynh Đệ
-            </h1>
-        </a></div>
+}
 
 
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Ảnh</a>
-            <a href="#contact">Liên hệ</a>
-        </nav>
+/* Preloader */
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #fffaf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2000;
+    transition: opacity 0.8s ease, visibility 0.8s;
+}
 
-        <!-- gọi toggleMenu() khi click -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #27ae60;
+    /* xanh lá */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
 
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Ảnh</a>
-            <a href="#contact">Liên hệ</a>
-        </div>
+#preloader p {
+    font-family: 'Poppins', sans-serif;
+    color: #27ae60;
+    font-weight: bold;
+}
 
-        <!-- overlay -->
-        <div class="overlay" id="overlay"></div>
-    </header>
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+/* back to top */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    color: #003329;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
 
-    <!-- Hero -->
-    <section class="hero">
-        <h2>Cơm Ngon Bình Dân</h2>
-        <p>Nhanh chóng - Nóng hổi - Đậm đà hương vị</p>
-        <button id="btnOrder">Đặt cơm ngay</button>
-    </section>
+.back-to-top-btn:hover {
+    background-color: green;
+    transform: scale(1.1);
+    color: white;
+    cursor: url('img/pointer32.png'), pointer;
+}
 
-    <!-- Menu -->
-    <section id="menu">
-        <h2 data-aos="fade-up">Thực Đơn Đồng Giá 25.000đ</h2>
+.back-to-top-btn.show {
+    display: flex;
+}
 
-        <!-- Nhóm Thịt Heo -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Heo</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/thitkhomam.webp" alt="Thịt Kho Mắm Ruốc">
-                <h3>Thịt Kho Mắm Ruốc</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/cotletnuong.jpg" alt="Sườn Cốt Lết Nướng">
-                <h3>Sườn Cốt Lết Nướng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/suonmieng.jpg" alt="Sườn Cốt Lết Ram">
-                <h3>Sườn Cốt Lết Ram</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/thitkhomang.jpg" alt="Thịt Kho Măng">
-                <h3>Thịt Kho Măng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/thitkhotrung.jpeg" alt="Thịt Kho Trứng">
-                <h3>Thịt Kho Trứng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/thitkhotom.jpg" alt="Thịt Kho Tôm">
-                <h3>Thịt Kho Tôm</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
-                <img src="img/dau-nhoi-thit-1.jpg" alt="Đậu Hủ Nhồi Thịt">
-                <h3>Đậu Hủ Nhồi Thịt</h3>
-            </div>
-        </div>
+header {
+    background: #27ae60;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <!-- Nhóm Thịt Gà -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Gà</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/gakho.jpg" alt="Gà Kho">
-                <h3>Gà Kho</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/duigachienmam.jpg" alt="Đùi Gà Chiên Mắm">
-                <h3>Đùi Gà Chiên Mắm</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/longxaomuop.jpg" alt="Lòng Xào Mướp">
-                <h3>Lòng Xào Mướp</h3>
-            </div>
-        </div>
+header h1 {
+    font-size: 22px;
+}
 
-        <!-- Nhóm Cá -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Cá</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/cangu.webp" alt="Cá Ngừ Kho Thơm">
-                <h3>Cá Ngừ Kho Thơm</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/cabasa.jpg" alt="Cá Ba Sa Kho Lạt">
-                <h3>Cá Ba Sa Kho Lạt</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/caro.jpg" alt="Cá Rô Kho Tiêu">
-                <h3>Cá Rô Kho Tiêu</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/calockho.jpg" alt="Cá Lóc Kho Tiêu">
-                <h3>Cá Lóc Kho Tiêu</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/canuc.webp" alt="Cá Nục Kho Măng">
-                <h3>Cá Nục Kho Măng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/cahuong.jpg" alt="Cá Hường Chiên Sả">
-                <h3>Cá Hường Chiên Sả</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
-                <img src="img/cadieuhong.jpg" alt="Cá Diêu Hồng Sốt Cà">
-                <h3>Cá Diêu Hồng Sốt Cà</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
-                <img src="img/ca-dieu-hong-tam-bot-chien-xu.jpg" alt="Cá Diêu Hồng Chiên">
-                <h3>Cá Diêu Hồng Chiên</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
-                <img src="img/canucchien.jpg" alt="Cá Nục Chiên">
-                <h3>Cá Nục Chiên</h3>
-            </div>
-        </div>
+nav {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
 
-        <!-- Nhóm Khác -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Khác</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/thlinh.jpg" alt="Thú Linh">
-                <h3>Thú Linh</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/chaca.webp" alt="Chả Cá Sốt Cà">
-                <h3>Chả Cá Sốt Cà</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/mamchung.webp" alt="Mắm Chưng">
-                <h3>Mắm Chưng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/khoquanhoi.jpg" alt="Khổ Qua Nhồi Thịt">
-                <h3>Khổ Qua Nhồi Thịt</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/dauhuxa.jpg" alt="Đậu Hủ Chiên Sả">
-                <h3>Đậu Hủ Chiên Sả</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/trungchien.jpg" alt="Trứng Chiên Hành">
-                <h3>Trứng Chiên Hành</h3>
-            </div>
-        </div>
-    </section>
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    <section id="gallery">
-        <h2 data-aos="fade-up">Hình Ảnh Quán</h2>
-        <div class="gallery-cards" data-aos="fade-up">
-            <div class="gallery-card">
-                <img src="img/1.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/2.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/3.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-            <div class="gallery-card">
-                <img src="img/4.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/5.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/6.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-            <div class="gallery-card">
-                <img src="img/7.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/8.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/9.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-        </div>
-    </section>
+nav a:hover {
+    text-decoration: none;
+    color: rgb(192, 192, 71);
+    transition: color 0.3s ease;
+    cursor: url('img/pointer32.png'), pointer;
+}
 
-    <section id="promotions">
-        <h2 data-aos="fade-up">Ưu Đãi Đặc Biệt</h2>
-        <div class="promo-cards">
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/comthem.webp" alt="Ăn tại chỗ">
-                <h3>Ăn tại chỗ</h3>
-                <p>Được thêm <strong>cơm, rau & canh miễn phí</strong> khi dùng tại quán.</p>
-            </div>
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/giao.png" alt="Giao hàng">
-                <h3>Giao hàng</h3>
-                <p>Miễn phí giao hàng cho đơn từ <strong>5 phần</strong> trong bán kính <strong>10km</strong>. Mỗi phần
-                    đều có <strong>cơm thêm và rau</strong> đầy đủ.</p>
-            </div>
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/com.jpg" alt="Đặt số lượng lớn">
-                <h3>Đặt số lượng lớn</h3>
-                <p>Do quán có <strong>quy mô nhỏ</strong>, quý khách đặt <strong>số lượng lớn</strong> vui lòng thực
-                    hiện <strong>thanh toán trước</strong>.</p>
+/* mobile nav */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+}
 
-            </div>
-        </div>
-    </section>
+.mobile-nav a {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.mobile-nav a:hover {
+    background: green;
+    color: #fff;
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+/* trạng thái mở */
+.mobile-nav.active {
+    right: 0;
+}
+
+/* overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1200;
+    position: relative;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.hide {
+    display: none !important;
+}
+
+.hero {
+    width: 100%;
+    height: 70vh;
+    background: url('img/quan.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    overflow-x: hidden;
+}
+
+/* lớp phủ mờ */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero h2,
+.hero p,
+.hero button {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: khaki;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    animation: slideInLeft 1s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 2;
+    animation: slideInRight 1.2s ease-out;
+}
+
+.hero button {
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+    border: none;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: slideInUp 1.4s ease-out;
+}
+
+.hero button:hover {
+    transform: scale(1.08);
+    background: #9b59b6;
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: brown;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: white;
+    cursor: url('img/cursor32.png'), auto;
+}
+
+.call-wrapper {
+    position: fixed;
+    left: 30px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+.call-button {
+    width: 60px;
+    height: 60px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    overflow: visible;
+}
+
+.call-button i {
+    font-size: 22px;
+    position: relative;
+    z-index: 2;
+    animation: shake 1.5s infinite ease-in-out;
+}
+
+.call-wrapper a:hover {
+    cursor: url('img/pointer32.png'), auto;
+}
+
+.wave {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(40, 167, 69, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+    animation: ripple 1.5s infinite ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(25deg);
+    }
+
+    40% {
+        transform: rotate(-25deg);
+    }
+
+    60% {
+        transform: rotate(20deg);
+    }
+
+    80% {
+        transform: rotate(-20deg);
+    }
+}
 
 
+a {
+    text-decoration: none;
+}
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2 data-aos="fade-up">Liên hệ</h2>
-        <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
 
-            <!-- Bên thông tin: dùng table -->
-            <div class="contact-info" style="flex: 1; min-width: 300px;" data-aos="fade-right">
-                <table border="1" cellpadding="10" cellspacing="0"
-                    style="width: 100%; border-collapse: collapse; text-align: left;">
-                    <tr>
-                        <th>Thông tin</th>
-                        <th>Chi tiết</th>
-                    </tr>
-                    <tr>
-                        <td>Địa chỉ</td>
-                        <td><a href="https://maps.app.goo.gl/Ae9RAzE7hsco2CeJ7" target="_blank">227 Phạm Văn Diêu, Tân
-                                Hạnh, Biên Hòa, Đồng Nai, Việt Nam</a></td>
-                    </tr>
-                    <tr>
-                        <td>Hotline</td>
-                        <td><a href="tel:0862707346">0862707346</a></td>
-                    </tr>
-                    <tr>
-                        <td>Zalo</td>
-                        <td><a href="https://zalo.me/0862707346" target="_blank">Chat ngay</a></td>
-                    </tr>
-                    <tr>
-                        <td>Facebook</td>
-                        <td><a href="https://www.facebook.com/profile.php?id=100076196765891"
-                                target="_blank">Messenger</a></td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Bên Google Map -->
-            <div class="contact-map" style="flex: 1; min-width: 300px;" data-aos="fade-left">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2240090555806!2d106.7767398!3d10.9464442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d95d70ba9715%3A0x1f735a127b520982!2zQ8OgIHBow6ogLSBRdcOhbiBDxqFtIEh1eW5oIMSQ4buH!5e0!3m2!1svi!2s!4v1757265635808!5m2!1svi!2s"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-        </div>
-    </section>
+.menu-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
 
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Quán Cơm Huynh Đệ. All rights reserved.</p>
-    </footer>
+.menu-category {
+    font-size: 24px;
+    color: green;
+    margin: 50px 0 30px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid lightgreen;
+    padding-bottom: 5px;
+}
 
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
-</body>
 
-</html>
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover img {
+    transform: scale(1.05);
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+.menu-item h3 {
+    margin: 5px 0 10px;
+    color: #2ecc71;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover h3 {
+    color: #27ae60;
+}
+
+
+.menu-item:hover p {
+    color: #27ae60;
+}
+
+.gallery-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+@media (min-width: 1200px) {
+    .gallery-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .menu {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Container chính */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Bảng thông tin */
+.contact-info table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-info th {
+    background-color: green;
+    color: #fff;
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-info td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+
+.contact-info td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: green;
+    text-decoration: none;
+    padding: 12px 0;
+}
+
+.contact-info td a:hover {
+    text-decoration: none;
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 370px;
+    border: none;
+    border-radius: 8px;
+
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 30px !important;
+    }
+
+    .hero p {
+        font-size: 22px !important;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-map {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .contact-map iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+}
+
+#promotions {
+    padding: 50px 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+#promotions h2 {
+    font-size: 32px;
+    color: #27ae60;
+    margin-bottom: 50px;
+}
+
+/* Promo cards 3 trên 1 hàng */
+.promo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.promo-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    flex: 1 1 30%;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    cursor: url('img/pointer32.png'), pointer;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.promo-card h3 {
+    font-size: 24px;
+    color: #27ae60;
+    margin: 15px 0 10px;
+}
+
+.promo-card p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.promo-card strong {
+    color: red;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 900px) {
+    .promo-card {
+        flex: 1 1 45%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .promo-card {
+        flex: 1 1 100%;
+    }
+
+}
