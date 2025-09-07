@@ -10,7 +10,7 @@ body {
     color: #333;
     line-height: 1.6;
     cursor: url('img/cursor32.png'), auto;
-    cursor: url('img/pointer32.png'), pointer;
+    
 }
 
 
@@ -114,6 +114,7 @@ nav a:hover {
     text-decoration: none;
     color: rgb(192, 192, 71);
     transition: color 0.3s ease;
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 /* mobile nav */
@@ -144,6 +145,7 @@ nav a:hover {
 .mobile-nav a:hover {
     background: green;
     color: #fff;
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 /* trạng thái mở */
@@ -266,6 +268,7 @@ nav a:hover {
     transform: scale(1.08);
     background: #9b59b6;
     box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 @keyframes slideInLeft {
@@ -422,6 +425,7 @@ a {
 .menu-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 .menu-item img {
@@ -433,6 +437,7 @@ a {
 
 .menu-item:hover img {
     transform: scale(1.05);
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 .menu-item h3 {
@@ -469,6 +474,7 @@ a {
 
 .gallery-card img:hover {
     transform: scale(1.05);
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 @media (min-width: 1200px) {
@@ -526,6 +532,7 @@ a {
 
 .contact-info td a:hover {
     text-decoration: none;
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 .contact-map iframe {
@@ -617,6 +624,7 @@ footer {
 
 .promo-card:hover {
     transform: translateY(-5px);
+    cursor: url('img/pointer32.png'), pointer;
 }
 
 .promo-card img {
@@ -656,3 +664,4 @@ footer {
     }
 
 }
+
