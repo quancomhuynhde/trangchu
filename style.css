@@ -577,7 +577,12 @@ footer {
     nav {
         display: none;
     }
-
+   .hero {
+        height: 100vh; 
+        background-attachment: scroll; 
+        background-size: cover;       
+        background-position: center;  
+    }
     .hamburger {
         display: flex;
     }
