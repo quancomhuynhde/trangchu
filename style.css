@@ -89,7 +89,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
 }
@@ -579,7 +579,7 @@ footer {
     nav {
         display: none;
     }
-        .hero, .section, .menu {
+        html,body {
         overflow-x: hidden !important;
     }
    .hero {
