@@ -525,6 +525,163 @@ a {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+  /* Section & tiêu đề */
+        .timeline-section {
+            padding: 80px 20px;
+            background-color: #fff8f0;
+            text-align: center;
+        }
+
+        .timeline-section h2 {
+            font-size: 36px;
+            color: #d9534f;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        /* Timeline container */
+        .timeline {
+            position: relative;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        /* Đường timeline */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #d9534f;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item::before {
+            content: attr(data-year);
+            position: absolute;
+            top: 20px;
+            font-weight: bold;
+            font-size: 24px;
+            /* chữ to, đồng đều */
+            color: #d9534f;
+        }
+
+        /* Vị trí chữ năm cho lẻ/chẵn - chuẩn và đều */
+        .timeline-item:nth-child(odd)::before {
+            right: -160px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -160px;
+        }
+
+        /* Timeline items */
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        /* Vị trí items lẻ/chẵn */
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        /* Nội dung: ảnh + chữ ngang */
+        .timeline-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .timeline-content .text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            flex-direction: row;
+            text-align: left;
+        }
+
+        /* Reset margin h3/p */
+        .timeline-content .text h3 {
+            margin: 0;
+            font-size: 24px;
+            line-height: 1.2;
+            color: green;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .timeline-content .text p {
+            margin: 0;
+        }
+
+        /* Hiệu ứng fade khi scroll */
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0 !important;
+                width: 100%;
+                text-align: center;
+            }
+
+            .timeline-item::before {
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
+
+            .timeline-content {
+                flex-direction: column !important;
+            }
+
+            .timeline-content img {
+                width: 200px;
+                height: 200px;
+                margin: 15px;
+            }
+
+            .timeline-content .text {
+                text-align: center;
+            }
+        }
 
 /* Container chính */
 .contact-container {
@@ -717,5 +874,6 @@ body,html {
     }
 
 }
+
 
 
