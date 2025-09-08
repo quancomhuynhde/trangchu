@@ -82,3 +82,13 @@ menuItems.forEach(item => {
     });
 
 });
+   const items = document.querySelectorAll('.timeline-item');
+        function checkVisible() {
+            const triggerBottom = window.innerHeight * 0.85;
+            items.forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < triggerBottom) { item.classList.add('visible'); }
+            });
+        }
+        window.addEventListener('scroll', checkVisible);
+        window.addEventListener('load', checkVisible);
