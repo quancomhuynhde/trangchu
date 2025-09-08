@@ -24,7 +24,7 @@ body {
     align-items: center;
     flex-direction: column;
     z-index: 2000;
-    transition: opacity 0.8s ease, visibility 0.8s;
+    transition: opacity 0.1s ease, visibility 0.1s;
 }
 
 .loader {
@@ -901,6 +901,7 @@ body,html {
     }
 
 }
+
 
 
 
