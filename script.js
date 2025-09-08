@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
     preloader.style.opacity = "0";
     preloader.style.visibility = "hidden";
-    setTimeout(() => preloader.remove(), 500);
+    setTimeout(() => preloader.remove(), 100);
 });
 
 const btn = document.getElementById('btnOrder');
@@ -92,3 +92,4 @@ menuItems.forEach(item => {
         }
         window.addEventListener('scroll', checkVisible);
         window.addEventListener('load', checkVisible);
+
