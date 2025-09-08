@@ -572,7 +572,7 @@ footer {
     padding: 15px 10px;
     margin-top: 30px;
 }
-.hero, .section, .menu {
+body,html {
         overflow-x: hidden !important;
     }
 @media (max-width: 1024px) {
