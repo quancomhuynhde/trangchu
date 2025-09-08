@@ -442,9 +442,9 @@ a {
     right: 10px;
     background-color: #ff4d4f; 
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 4px 8px;
+    padding: 8px 12px;
     border-radius: 4px;
     z-index: 2;
 }
@@ -717,4 +717,5 @@ body,html {
     }
 
 }
+
 
