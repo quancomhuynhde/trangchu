@@ -653,53 +653,37 @@ a {
         }
 
         /* Responsive */
-        @media screen and (max-width: 768px) {
 @media screen and (max-width: 1024px) {
-  .timeline-item, .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
-    left: 0 !important;
-    width: 100%;
-    text-align: center;
-    padding: 10px 15px;
-  }
+    .container {
+        width:90%;
+        margin:10px;
+    }
+            .timeline-item,
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0 !important;
+                width: 100%;
+                text-align: center;
+            }
 
-  .timeline-item::before {
-    left: 50% !important;
-    transform: translateX(-50%);
-    top: -10px; 
-    font-size: 20px; 
-  }
+            .timeline-item::before {
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
 
-  .timeline-content {
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    padding: 15px 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 12px; 
-  }
+            .timeline-content {
+                flex-direction: column !important;
+            }
 
-  .timeline-content img {
-    width: 180px; 
-    height: 180px;
-    margin-bottom: 12px;
-  }
+            .timeline-content img {
+                width: 200px;
+                height: 200px;
+                margin: 15px;
+            }
 
-  .timeline-content .text {
-    width: 100%;
-    text-align: center;
-  }
-
-  .timeline-content .text h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-
-  .timeline-content .text p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-}
-
+            .timeline-content .text {
+                text-align: center;
+            }
         }
 
 /* Container chính */
@@ -893,6 +877,7 @@ body,html {
     }
 
 }
+
 
 
 
