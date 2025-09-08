@@ -637,11 +637,10 @@ footer {
 
 #promotions h2 {
     font-size: 32px;
-    color: #27ae60;
+    color: brown;
     margin-bottom: 50px;
 }
 
-/* Promo cards 3 trên 1 hàng */
 .promo-cards {
     display: flex;
     flex-wrap: wrap;
