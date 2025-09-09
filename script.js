@@ -1,11 +1,29 @@
 AOS.init({ duration: 1200, once: true });
-window.addEventListener("load", () => {
-    const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0";
-    preloader.style.visibility = "hidden";
-    setTimeout(() => preloader.remove(), 100);
-});
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.getElementById("preloader");
+
+    if (preloader) {
+      // Ẩn preloader
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+
+      // Xóa khỏi DOM sau khi transition xong (0.1s)
+      setTimeout(() => {
+        preloader.remove();
+      }, 150); 
+    }
+  });
+
+  // Fallback: nếu DOM chưa load thì vẫn auto ẩn sau 5s
+  setTimeout(() => {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+      preloader.style.opacity = "0";
+      preloader.style.visibility = "hidden";
+      setTimeout(() => preloader.remove(), 150);
+    }
+  }, 5000);
 const btn = document.getElementById('btnOrder');
 btn.addEventListener('click', () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
