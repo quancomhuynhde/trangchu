@@ -816,7 +816,15 @@ body,html {
     }
     .menu-item h3 {
         font-size:20px;
-        }
+    }
+     .promo-cards img {
+    width: 300px;       
+    height: 300px;      
+    border-radius: 12px;
+    object-fit: cover;
+  }
+        
+        
 }
 
 #promotions {
