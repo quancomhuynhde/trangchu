@@ -687,8 +687,7 @@ a {
   }
 
   .timeline-content img {
-    width: 90%;       
-    max-width: 500px;  
+    width: 300px;       
     height: 500px;      
     margin: 30px 0px 0px;
     border-radius: 12px;
@@ -821,8 +820,8 @@ body,html {
     }
 
     .menu-item img {
-        width: 100%;
-        height: 220px;
+        width: 300px;
+        height: 300px;
         object-fit: cover;
         transition: transform 0.5s ease;
     }
