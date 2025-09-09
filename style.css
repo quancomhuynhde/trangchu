@@ -30,7 +30,6 @@ body {
 .loader {
     border: 6px solid #f3f3f3;
     border-top: 6px solid #27ae60;
-    /* xanh lá */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -150,12 +149,10 @@ nav a:hover {
     cursor: url('img/pointer32.png'), pointer;
 }
 
-/* trạng thái mở */
 .mobile-nav.active {
     right: 0;
 }
 
-/* overlay */
 .overlay {
     display: none;
     position: fixed;
@@ -564,7 +561,6 @@ a {
             top: 20px;
             font-weight: bold;
             font-size: 24px;
-            /* chữ to, đồng đều */
             color: #d9534f;
         }
 
@@ -577,7 +573,6 @@ a {
             left: -160px;
         }
 
-        /* Timeline items */
         .timeline-item {
             position: relative;
             width: 50%;
@@ -587,8 +582,6 @@ a {
             transform: translateY(50px);
             transition: all 0.6s ease-out;
         }
-
-        /* Vị trí items lẻ/chẵn */
         .timeline-item:nth-child(odd) {
             left: 0;
             text-align: right;
@@ -598,8 +591,6 @@ a {
             left: 50%;
             text-align: left;
         }
-
-        /* Nội dung: ảnh + chữ ngang */
         .timeline-content {
             display: flex;
             align-items: center;
@@ -632,7 +623,6 @@ a {
             text-align: left;
         }
 
-        /* Reset margin h3/p */
         .timeline-content .text h3 {
             margin: 0;
             font-size: 24px;
@@ -645,8 +635,6 @@ a {
         .timeline-content .text p {
             margin: 0;
         }
-
-        /* Hiệu ứng fade khi scroll */
         .timeline-item.visible {
             opacity: 1;
             transform: translateY(0);
@@ -677,6 +665,7 @@ a {
     transform: translateX(-50%);
     font-size: 24px;
     margin: 0px;
+    bottom:10px;
   }
 
   .timeline-content {
