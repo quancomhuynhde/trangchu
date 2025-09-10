@@ -2,414 +2,414 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cơm Huynh Đệ - Quán Cơm Ngon, Giá Rẻ</title>
-    <meta name="description" content="Quán Cơm Huynh Đệ - Cơm đồng giá chỉ 25K, ăn tại chỗ free thêm cơm, canh, rau. Giao hàng tận nơi trong khu vực.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cơm Huynh Đệ - Quán Cơm Ngon, Giá Rẻ</title>
+  <meta name="description"
+    content="Quán Cơm Huynh Đệ - Cơm đồng giá chỉ 25K, ăn tại chỗ free thêm cơm, canh, rau. Giao hàng tận nơi trong khu vực.">
 
-<!-- Open Graph (Facebook, Zalo, Messenger) -->
-<meta property="og:title" content="Quán Cơm Huynh Đệ - Cơm bình dân ngon, giá rẻ">
-<meta property="og:description" content="Cơm ngon 25K, ăn no nê, free thêm cơm + canh + rau. Giao hàng nhanh trong khu vực.">
-<meta property="og:image" content="https://quancomhuynhde.github.io/trangchu/img/quan.jpg">
-<meta property="og:url" content="https://quancomhuynhde.github.io/trangchu/">
-<meta property="og:type" content="website">
+  <!-- Open Graph (Facebook, Zalo, Messenger) -->
+  <meta property="og:title" content="Quán Cơm Huynh Đệ - Cơm bình dân ngon, giá rẻ">
+  <meta property="og:description"
+    content="Cơm ngon 25K, ăn no nê, free thêm cơm + canh + rau. Giao hàng nhanh trong khu vực.">
+  <meta property="og:image" content="https://quancomhuynhde.github.io/trangchu/img/quan.jpg">
+  <meta property="og:url" content="https://quancomhuynhde.github.io/trangchu/">
+  <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Quán Cơm Huynh Đệ - Cơm bình dân ngon, giá rẻ">
-<meta name="twitter:description" content="Cơm ngon 25K, ăn no nê, free thêm cơm + canh + rau.">
-<meta name="twitter:image" content="https://quancomhuynhde.github.io/trangchu/img/quan.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quán Cơm Huynh Đệ - Cơm bình dân ngon, giá rẻ">
+  <meta name="twitter:description" content="Cơm ngon 25K, ăn no nê, free thêm cơm + canh + rau.">
+  <meta name="twitter:image" content="https://quancomhuynhde.github.io/trangchu/img/quan.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-    <div class="call-wrapper">
-        <a href="tel:0862707346" class="call-button">
-            <span class="wave"></span>
-            <i class="fas fa-phone-alt"></i>
-        </a>
-    </div>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
-        <p>Đang tải...</p>
-    </div>
-    <!-- Nút lên đầu trang -->
-    <button id="backToTopBtn" class="back-to-top-btn">↑</button>
-    <!-- Header -->
-    <header>
-        <a href="#">
-            <h1 class="brand">
-                Cơm Huynh Đệ
-            </h1>
-        </a>
-
-
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Ảnh</a>
-            <a href="#promotions">Ưu Đãi</a>
-             <a href="#brand-history">Về Chúng Tôi</a>
-            <a href="#payment-methods">Thanh Toán</a>
-            <a href="#contact">Liên Hệ</a>
-            
-        </nav>
-
-        <!-- gọi toggleMenu() khi click -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
-
-        <div class="mobile-nav" id="mobileNav">
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Ảnh</a>
-            <a href="#promotions">Ưu Đãi</a>
-            <a href="#brand-history">Về Chúng Tôi</a>
-            <a href="#payment-methods">Thanh Toán</a>
-            <a href="#contact">Liên Hệ</a>
-        </div>
-
-        <!-- overlay -->
-        <div class="overlay" id="overlay"></div>
-    </header>
-
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-
-    <!-- Hero -->
-    <section class="hero">
-        <h2>Cơm Ngon Bình Dân</h2>
-        <p>Nhanh chóng - Nóng hổi - Đậm đà</p>
-        <button id="btnOrder">Đặt cơm ngay</button>
-    </section>
-
-    <!-- Menu -->
-    <section id="menu">
-        <h2 data-aos="fade-up">Thực Đơn Đồng Giá 25.000đ</h2>
-
-        <!-- Nhóm Thịt Heo -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Heo</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/thitkhomam.webp" alt="Thịt Kho Mắm Ruốc">
-                <h3>Thịt Kho Mắm Ruốc</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/cotletnuong.jpg" alt="Sườn Cốt Lết Nướng">
-                <h3>Sườn Cốt Lết Nướng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/suonmieng.jpg" alt="Sườn Cốt Lết Ram">
-                <h3>Sườn Cốt Lết Ram</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/thitkhomang.jpg" alt="Thịt Kho Măng">
-                <h3>Thịt Kho Măng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/thitkhotrung.jpeg" alt="Thịt Kho Trứng">
-                <h3>Thịt Kho Trứng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/thitkhotom.jpg" alt="Thịt Kho Tôm">
-                <h3>Thịt Kho Tôm</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
-                <img src="img/dau-nhoi-thit-1.jpg" alt="Đậu Hủ Nhồi Thịt">
-                <h3>Đậu Hủ Nhồi Thịt</h3>
-            </div>
-        </div>
-
-        <!-- Nhóm Thịt Gà -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Gà</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/gakho.jpg" alt="Gà Kho">
-                <h3>Gà Kho</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/duigachienmam.jpg" alt="Đùi Gà Chiên Mắm">
-                <h3>Đùi Gà Chiên Mắm</h3>
-                <span class="best-seller">Bán Chạy</span>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/longxaomuop.jpg" alt="Lòng Xào Mướp">
-                <h3>Lòng Xào Mướp</h3>
-            </div>
-        </div>
-
-        <!-- Nhóm Cá -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Cá</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/cangu.webp" alt="Cá Ngừ Kho Thơm">
-                <h3>Cá Ngừ Kho Thơm</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/cabasa.jpg" alt="Cá Ba Sa Kho Lạt">
-                <h3>Cá Ba Sa Kho Lạt</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/caro.jpg" alt="Cá Rô Kho Tiêu">
-                <h3>Cá Rô Kho Tiêu</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/calockho.jpg" alt="Cá Lóc Kho Tiêu">
-                <h3>Cá Lóc Kho Tiêu</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/canuc.webp" alt="Cá Nục Kho Măng">
-                <h3>Cá Nục Kho Măng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/cahuong.jpg" alt="Cá Hường Chiên Sả">
-                <h3>Cá Hường Chiên Sả</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
-                <img src="img/cadieuhong.jpg" alt="Cá Diêu Hồng Sốt Cà">
-                <h3>Cá Diêu Hồng Sốt Cà</h3>
-                 <span class="best-seller">Bán Chạy</span>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
-                <img src="img/ca-dieu-hong-tam-bot-chien-xu.jpg" alt="Cá Diêu Hồng Chiên">
-                <h3>Cá Diêu Hồng Chiên</h3>
-                <span class="best-seller">Bán Chạy</span>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
-                <img src="img/canucchien.jpg" alt="Cá Nục Chiên">
-                <h3>Cá Nục Chiên</h3>
-            </div>
-        </div>
-
-        <!-- Nhóm Khác -->
-        <h3 class="menu-category" data-aos="fade-up">Các Món Khác</h3>
-        <div class="menu">
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/thlinh.jpg" alt="Thú Linh">
-                <h3>Thú Linh</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/chaca.webp" alt="Chả Cá Sốt Cà">
-                <h3>Chả Cá Sốt Cà</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/mamchung.webp" alt="Mắm Chưng">
-                <h3>Mắm Chưng</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="img/khoquanhoi.jpg" alt="Khổ Qua Nhồi Thịt">
-                <h3>Khổ Qua Nhồi Thịt</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="img/dauhuxa.jpg" alt="Đậu Hủ Chiên Sả">
-                <h3>Đậu Hủ Chiên Sả</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/trungchien.jpg" alt="Trứng Chiên Hành">
-                <h3>Trứng Chiên Hành</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/IMG_0059.jpeg" alt="Trứng Chiên">
-                <h3>Trứng Chiên</h3>
-            </div>
-            <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="img/IMG_0061.jpeg" alt="Vịt Kho Gừng">
-                <h3>Vịt Kho Gừng</h3>
-            </div>
-            
-        </div>
-    </section>
-
-    <section id="gallery">
-        <h2 data-aos="fade-up">Hình Ảnh Quán</h2>
-        <div class="gallery-cards" data-aos="fade-up">
-            <div class="gallery-card">
-                <img src="img/1.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/2.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/3.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-            <div class="gallery-card">
-                <img src="img/4.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/5.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/6.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-            <div class="gallery-card">
-                <img src="img/7.jpg" alt="Quán Cơm Huynh Đệ 1">
-            </div>
-            <div class="gallery-card">
-                <img src="img/8.jpg" alt="Quán Cơm Huynh Đệ 2">
-            </div>
-            <div class="gallery-card">
-                <img src="img/9.jpg" alt="Quán Cơm Huynh Đệ 3">
-            </div>
-        </div>
-    </section>
-
-    <section id="promotions">
-        <h2 data-aos="fade-up">Ưu Đãi Đặc Biệt</h2>
-        <div class="promo-cards">
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="0">
-                <img src="img/comthem.webp" alt="Ăn tại chỗ">
-                <h3>Ăn tại chỗ</h3>
-                <p>Được thêm <strong>cơm, rau & canh miễn phí</strong> khi dùng tại quán.</p>
-            </div>
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="100">
-                <img src="img/giao.png" alt="Giao hàng">
-                <h3>Giao hàng</h3>
-                <p>Miễn phí giao hàng cho đơn từ <strong>5 phần</strong> trong bán kính <strong>10km</strong>. Mỗi phần
-                    đều có <strong>cơm thêm và rau</strong> đầy đủ.</p>
-            </div>
-            <div class="promo-card" data-aos="zoom-in" data-aos-delay="200">
-                <img src="img/com.jpg" alt="Đặt số lượng lớn">
-                <h3>Đặt số lượng lớn</h3>
-                <p>Do quán có <strong>quy mô nhỏ</strong>, quý khách đặt <strong>số lượng lớn</strong> vui lòng thực
-                    hiện <strong>thanh toán trước</strong>.</p>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="brand-history" class="timeline-section">
-        <div class="container">
-            <h2>Lịch sử thương hiệu</h2>
-            <div class="timeline">
-
-                <!-- Mốc 1 -->
-                <div class="timeline-item" data-year="2005 - 2008">
-                    <div class="timeline-content">
-                        <img src="img/Cơm_Tấm,_Da_Nang,_Vietnam.jpg" alt="Bắt đầu bán cơm tấm" />
-                        <div class="text">
-                            <h3>Bắt đầu bán cơm tấm</h3>
-                            <p>Nhà tôi mở quán cơm tấm từ năm 2005, phục vụ những suất cơm thơm ngon, đậm đà hương vị
-                                truyền thống. Ngay từ những ngày đầu, quán đã được thực khách yêu thích nhờ chất lượng
-                                món ăn và sự nhiệt tình, thân thiện trong phục vụ, tạo dựng nền tảng cho thương hiệu cơm
-                                tấm gia đình sau này.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mốc 2 -->
-                <div class="timeline-item" data-year="2008 - 2018">
-                    <div class="timeline-content">
-                        <img src="img/3-go-thong-co-tot-khong.jpg" alt="Làm quản đốc công ty gỗ" />
-                        <div class="text">
-                            <h3>Ngưng bán để làm công ty</h3>
-                            <p>Suốt hơn 10 năm, tôi dành trọn thời gian và tâm huyết để đảm nhận vai trò quản đốc trong
-                                công ty gỗ, học hỏi, tích lũy kinh nghiệm quản lý, giám sát sản xuất, và rèn luyện kỹ
-                                năng tổ chức, để sau này có thể áp dụng những bài học quý giá này khi quay lại nghề kinh
-                                doanh của gia đình.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mốc 3 -->
-                <div class="timeline-item" data-year="2019 - Nay">
-                    <div class="timeline-content">
-                        <img src="img/comphan.jfif" alt="Quay lại nghề bán cơm phần" />
-                        <div class="text">
-                            <h3>Quay lại bán cơm phần</h3>
-                            <p>Với hơn 10 năm kinh nghiệm quản lý và niềm đam mê với ẩm thực, tôi quyết định mở lại quán
-                                cơm phần chất lượng, không chỉ giữ hương vị truyền thống mà còn cải tiến để phục vụ thực
-                                khách chu đáo, mang đến những bữa ăn ngon miệng và đầy đủ dinh dưỡng, đáp ứng nhu cầu
-                                ngày càng cao của khách hàng.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2 data-aos="fade-up">Liên hệ</h2>
-        <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
-
-            <!-- Bên thông tin: dùng table -->
-            <div class="contact-info" style="flex: 1; min-width: 300px;" data-aos="fade-right">
-                <table border="1" cellpadding="10" cellspacing="0"
-                    style="width: 100%; border-collapse: collapse; text-align: left;">
-                    <tr>
-                        <th>Thông tin</th>
-                        <th>Chi tiết</th>
-                    </tr>
-                    <tr>
-                        <td>Địa chỉ</td>
-                        <td><a href="https://maps.app.goo.gl/Ae9RAzE7hsco2CeJ7" target="_blank">227 Phạm Văn Diêu, Tân
-                                Hạnh, Biên Hòa, Đồng Nai, Việt Nam</a></td>
-                    </tr>
-                    <tr>
-                        <td>Hotline</td>
-                        <td><a href="tel:0862707346">0862707346</a></td>
-                    </tr>
-                    <tr>
-                        <td>Zalo</td>
-                        <td><a href="https://zalo.me/0862707346" target="_blank">Chat ngay</a></td>
-                    </tr>
-                    <tr>
-                        <td>Facebook</td>
-                        <td><a href="https://www.facebook.com/profile.php?id=100076196765891"
-                                target="_blank">Messenger</a></td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Bên Google Map -->
-            <div class="contact-map" style="flex: 1; min-width: 300px;" data-aos="fade-left">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2240090555806!2d106.7767398!3d10.9464442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d95d70ba9715%3A0x1f735a127b520982!2zQ8OgIHBow6ogLSBRdcOhbiBDxqFtIEh1eW5oIMSQ4buH!5e0!3m2!1svi!2s!4v1757265635808!5m2!1svi!2s"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-        </div>
-    </section>
-<section id="payment-methods">
-  <h2>thanh toán</h2>
-  <div class="payment-grid">
-    <div class="payment-item">
-      <img src="img/bank.png" alt="Chuyển Khoản">
-      <p>Chuyển Khoản</p>
-    </div>
-    <div class="payment-item">
-      <img src="img/cash.png" alt="Tiền Mặt">
-      <p>Tiền Mặt</p>
-    </div>
+  <div class="call-wrapper">
+    <a href="tel:0862707346" class="call-button">
+      <span class="wave"></span>
+      <i class="fas fa-phone-alt"></i>
+    </a>
   </div>
-</section>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <p>Đang tải...</p>
+  </div>
+  <!-- Nút lên đầu trang -->
+  <button id="backToTopBtn" class="back-to-top-btn">↑</button>
+  <!-- Header -->
+  <header>
+    <a href="#">
+      <h1 class="brand">
+        Cơm Huynh Đệ
+      </h1>
+    </a>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Quán Cơm Huynh Đệ. All rights reserved.</p>
-    </footer>
 
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Ảnh</a>
+      <a href="#promotions">Ưu Đãi</a>
+      <a href="#brand-history">Về Chúng Tôi</a>
+      <a href="#payment-methods">Thanh Toán</a>
+      <a href="#contact">Liên Hệ</a>
+
+    </nav>
+
+    <!-- gọi toggleMenu() khi click -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Ảnh</a>
+      <a href="#promotions">Ưu Đãi</a>
+      <a href="#brand-history">Về Chúng Tôi</a>
+      <a href="#payment-methods">Thanh Toán</a>
+      <a href="#contact">Liên Hệ</a>
+    </div>
+
+    <!-- overlay -->
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Cơm Ngon Bình Dân</h2>
+    <p>Nhanh chóng - Nóng hổi - Đậm đà</p>
+    <button id="btnOrder">Đặt cơm ngay</button>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <h2 data-aos="fade-up">Thực Đơn Đồng Giá 25.000đ</h2>
+
+    <!-- Nhóm Thịt Heo -->
+    <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Heo</h3>
+    <div class="menu">
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="img/thitkhomam.webp" alt="Thịt Kho Mắm Ruốc">
+        <h3>Thịt Kho Mắm Ruốc</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/cotletnuong.jpg" alt="Sườn Cốt Lết Nướng">
+        <h3>Sườn Cốt Lết Nướng</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/suonmieng.jpg" alt="Sườn Cốt Lết Ram">
+        <h3>Sườn Cốt Lết Ram</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/thitkhomang.jpg" alt="Thịt Kho Măng">
+        <h3>Thịt Kho Măng</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/thitkhotrung.jpeg" alt="Thịt Kho Trứng">
+        <h3>Thịt Kho Trứng</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
+        <img src="img/thitkhotom.jpg" alt="Thịt Kho Tôm">
+        <h3>Thịt Kho Tôm</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
+        <img src="img/dau-nhoi-thit-1.jpg" alt="Đậu Hủ Nhồi Thịt">
+        <h3>Đậu Hủ Nhồi Thịt</h3>
+      </div>
+    </div>
+
+    <!-- Nhóm Thịt Gà -->
+    <h3 class="menu-category" data-aos="fade-up">Các Món Thịt Gà</h3>
+    <div class="menu">
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="img/gakho.jpg" alt="Gà Kho">
+        <h3>Gà Kho</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/duigachienmam.jpg" alt="Đùi Gà Chiên Mắm">
+        <h3>Đùi Gà Chiên Mắm</h3>
+        <span class="best-seller">Bán Chạy</span>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/longxaomuop.jpg" alt="Lòng Xào Mướp">
+        <h3>Lòng Xào Mướp</h3>
+      </div>
+    </div>
+
+    <!-- Nhóm Cá -->
+    <h3 class="menu-category" data-aos="fade-up">Các Món Cá</h3>
+    <div class="menu">
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="img/cangu.webp" alt="Cá Ngừ Kho Thơm">
+        <h3>Cá Ngừ Kho Thơm</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/cabasa.jpg" alt="Cá Ba Sa Kho Lạt">
+        <h3>Cá Ba Sa Kho Lạt</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/caro.jpg" alt="Cá Rô Kho Tiêu">
+        <h3>Cá Rô Kho Tiêu</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/calockho.jpg" alt="Cá Lóc Kho Tiêu">
+        <h3>Cá Lóc Kho Tiêu</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/canuc.webp" alt="Cá Nục Kho Măng">
+        <h3>Cá Nục Kho Măng</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
+        <img src="img/cahuong.jpg" alt="Cá Hường Chiên Sả">
+        <h3>Cá Hường Chiên Sả</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="600">
+        <img src="img/cadieuhong.jpg" alt="Cá Diêu Hồng Sốt Cà">
+        <h3>Cá Diêu Hồng Sốt Cà</h3>
+        <span class="best-seller">Bán Chạy</span>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
+        <img src="img/ca-dieu-hong-tam-bot-chien-xu.jpg" alt="Cá Diêu Hồng Chiên">
+        <h3>Cá Diêu Hồng Chiên</h3>
+        <span class="best-seller">Bán Chạy</span>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="700">
+        <img src="img/canucchien.jpg" alt="Cá Nục Chiên">
+        <h3>Cá Nục Chiên</h3>
+      </div>
+    </div>
+
+    <!-- Nhóm Khác -->
+    <h3 class="menu-category" data-aos="fade-up">Các Món Khác</h3>
+    <div class="menu">
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="img/thlinh.jpg" alt="Thú Linh">
+        <h3>Thú Linh</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/chaca.webp" alt="Chả Cá Sốt Cà">
+        <h3>Chả Cá Sốt Cà</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/mamchung.webp" alt="Mắm Chưng">
+        <h3>Mắm Chưng</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/khoquanhoi.jpg" alt="Khổ Qua Nhồi Thịt">
+        <h3>Khổ Qua Nhồi Thịt</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/dauhuxa.jpg" alt="Đậu Hủ Chiên Sả">
+        <h3>Đậu Hủ Chiên Sả</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
+        <img src="img/trungchien.jpg" alt="Trứng Chiên Hành">
+        <h3>Trứng Chiên Hành</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
+        <img src="img/IMG_0059.jpeg" alt="Trứng Chiên">
+        <h3>Trứng Chiên</h3>
+      </div>
+      <div class="menu-item" data-aos="zoom-in" data-aos-delay="500">
+        <img src="img/IMG_0061.jpeg" alt="Vịt Kho Gừng">
+        <h3>Vịt Kho Gừng</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2 data-aos="fade-up">Hình Ảnh Quán</h2>
+    <div class="gallery-cards" data-aos="fade-up">
+      <div class="gallery-card">
+        <img src="img/1.jpg" alt="Quán Cơm Huynh Đệ 1">
+      </div>
+      <div class="gallery-card">
+        <img src="img/2.jpg" alt="Quán Cơm Huynh Đệ 2">
+      </div>
+      <div class="gallery-card">
+        <img src="img/3.jpg" alt="Quán Cơm Huynh Đệ 3">
+      </div>
+      <div class="gallery-card">
+        <img src="img/4.jpg" alt="Quán Cơm Huynh Đệ 1">
+      </div>
+      <div class="gallery-card">
+        <img src="img/5.jpg" alt="Quán Cơm Huynh Đệ 2">
+      </div>
+      <div class="gallery-card">
+        <img src="img/6.jpg" alt="Quán Cơm Huynh Đệ 3">
+      </div>
+      <div class="gallery-card">
+        <img src="img/7.jpg" alt="Quán Cơm Huynh Đệ 1">
+      </div>
+      <div class="gallery-card">
+        <img src="img/8.jpg" alt="Quán Cơm Huynh Đệ 2">
+      </div>
+      <div class="gallery-card">
+        <img src="img/9.jpg" alt="Quán Cơm Huynh Đệ 3">
+      </div>
+    </div>
+  </section>
+
+  <section id="promotions">
+    <h2 data-aos="fade-up">Ưu Đãi Đặc Biệt</h2>
+    <div class="promo-cards">
+      <div class="promo-card" data-aos="zoom-in" data-aos-delay="0">
+        <img src="img/comthem.webp" alt="Ăn tại chỗ">
+        <h3>Ăn tại chỗ</h3>
+        <p>Được thêm <strong>cơm, rau & canh miễn phí</strong> khi dùng tại quán.</p>
+      </div>
+      <div class="promo-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/giao.png" alt="Giao hàng">
+        <h3>Giao hàng</h3>
+        <p>Miễn phí giao hàng cho đơn từ <strong>5 phần</strong> trong bán kính <strong>10km</strong>. Mỗi phần
+          đều có <strong>cơm thêm và rau</strong> đầy đủ.</p>
+      </div>
+      <div class="promo-card" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/com.jpg" alt="Đặt số lượng lớn">
+        <h3>Đặt số lượng lớn</h3>
+        <p>Do quán có <strong>quy mô nhỏ</strong>, quý khách đặt <strong>số lượng lớn</strong> vui lòng thực
+          hiện <strong>thanh toán trước</strong>.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="brand-history" class="timeline-section">
+    <div class="container">
+      <h2>Lịch sử thương hiệu</h2>
+      <div class="timeline">
+
+        <!-- Mốc 1 -->
+        <div class="timeline-item" data-year="2005 - 2008">
+          <div class="timeline-content">
+            <img src="img/Cơm_Tấm,_Da_Nang,_Vietnam.jpg" alt="Bắt đầu bán cơm tấm" />
+            <div class="text">
+              <h3>Bắt đầu bán cơm tấm</h3>
+              <p>Nhà tôi mở quán cơm tấm từ năm 2005, phục vụ những suất cơm thơm ngon, đậm đà hương vị
+                truyền thống. Ngay từ những ngày đầu, quán đã được thực khách yêu thích nhờ chất lượng
+                món ăn và sự nhiệt tình, thân thiện trong phục vụ, tạo dựng nền tảng cho thương hiệu cơm
+                tấm gia đình sau này.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Mốc 2 -->
+        <div class="timeline-item" data-year="2008 - 2018">
+          <div class="timeline-content">
+            <img src="img/3-go-thong-co-tot-khong.jpg" alt="Làm quản đốc công ty gỗ" />
+            <div class="text">
+              <h3>Ngưng bán để làm công ty</h3>
+              <p>Suốt hơn 10 năm, tôi dành trọn thời gian và tâm huyết để đảm nhận vai trò quản đốc trong
+                công ty gỗ, học hỏi, tích lũy kinh nghiệm quản lý, giám sát sản xuất, và rèn luyện kỹ
+                năng tổ chức, để sau này có thể áp dụng những bài học quý giá này khi quay lại nghề kinh
+                doanh của gia đình.</p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Mốc 3 -->
+        <div class="timeline-item" data-year="2019 - Nay">
+          <div class="timeline-content">
+            <img src="img/comphan.jfif" alt="Quay lại nghề bán cơm phần" />
+            <div class="text">
+              <h3>Quay lại bán cơm phần</h3>
+              <p>Với hơn 10 năm kinh nghiệm quản lý và niềm đam mê với ẩm thực, tôi quyết định mở lại quán
+                cơm phần chất lượng, không chỉ giữ hương vị truyền thống mà còn cải tiến để phục vụ thực
+                khách chu đáo, mang đến những bữa ăn ngon miệng và đầy đủ dinh dưỡng, đáp ứng nhu cầu
+                ngày càng cao của khách hàng.</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Liên hệ</h2>
+    <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+      <!-- Bên thông tin: dùng table -->
+      <div class="contact-info" style="flex: 1; min-width: 300px;" data-aos="fade-right">
+        <table border="1" cellpadding="10" cellspacing="0"
+          style="width: 100%; border-collapse: collapse; text-align: left;">
+          <tr>
+            <th>Thông tin</th>
+            <th>Chi tiết</th>
+          </tr>
+          <tr>
+            <td>Địa chỉ</td>
+            <td><a href="https://maps.app.goo.gl/Ae9RAzE7hsco2CeJ7" target="_blank">227 Phạm Văn Diêu, Tân
+                Hạnh, Biên Hòa, Đồng Nai, Việt Nam</a></td>
+          </tr>
+          <tr>
+            <td>Hotline</td>
+            <td><a href="tel:0862707346">0862707346</a></td>
+          </tr>
+          <tr>
+            <td>Zalo</td>
+            <td><a href="https://zalo.me/0862707346" target="_blank">Chat ngay</a></td>
+          </tr>
+          <tr>
+            <td>Facebook</td>
+            <td><a href="https://www.facebook.com/profile.php?id=100076196765891" target="_blank">Messenger</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Bên Google Map -->
+      <div class="contact-map" style="flex: 1; min-width: 300px;" data-aos="fade-left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.2240090555806!2d106.7767398!3d10.9464442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d95d70ba9715%3A0x1f735a127b520982!2zQ8OgIHBow6ogLSBRdcOhbiBDxqFtIEh1eW5oIMSQ4buH!5e0!3m2!1svi!2s!4v1757265635808!5m2!1svi!2s"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </section>
+  <section id="payment-methods">
+    <h2>Phương thức thanh toán</h2>
+    <div class="payment-grid">
+      <div class="payment-item">
+        <a href="https://quancomhuynhde.github.io/thanhtoan.html" target="_blank">
+          <img src="img/bank.png" alt="Chuyển Khoản">
+          <p>Chuyển Khoản</p>
+        </a>
+      </div>
+      <div class="payment-item">
+        <a href="tel:0862707346">
+          <img src="img/cash.png" alt="Tiền Mặt">
+          <p>Tiền Mặt</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Quán Cơm Huynh Đệ. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
 
 
 </html>
-
-
-
-
-
