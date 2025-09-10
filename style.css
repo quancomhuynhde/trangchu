@@ -769,50 +769,57 @@ html {
     overflow-x: hidden !important;
 }
 
-#payment-methods {
+  #payment-methods {
     padding: 40px 20px;
     text-align: center;
-}
+  }
 
-#payment-methods h2 {
+  #payment-methods h2 {
     margin-bottom: 20px;
     color: brown;
     font-size: 30px;
     text-transform: uppercase;
-}
+  }
 
-.payment-grid {
+  .payment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
-}
+  }
 
-.payment-item {
+  .payment-item {
     background: #fff;
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
-}
+  }
 
-.payment-item img {
+  .payment-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; 
+    color: inherit;   
+  }
+
+  .payment-item img {
     max-width: 60px;
     margin-bottom: 10px;
-}
+  }
 
-.payment-item p {
+  .payment-item p {
     margin: 0;
     font-weight: 600;
     color: #444;
-}
+  }
 
-.payment-item:hover {
+  .payment-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
+  }
 @media (max-width: 1024px) {
     .container {
         width: 100%;
@@ -955,5 +962,6 @@ html {
     }
 
 }
+
 
 
