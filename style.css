@@ -699,6 +699,29 @@ padding: 0 10px;
 .promo-card strong {
 color: red;
 }
+/* Section thời gian bán cơm */
+.opening-hours {
+  background-color: #fdf5e6; /* nền nhạt, hoặc bạn chọn màu phù hợp trang */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.opening-hours h2 {
+  font-size: 28px;
+  color: #8b4513; /* màu nâu đất cho hợp với cơm/quán ăn */
+  margin-bottom: 12px;
+}
+
+.opening-hours p {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.opening-hours .hours {
+  font-weight: bold;
+  color: #b22222; /* hoặc màu nổi bật hơn */
+}
 
 /* Container chính */
 .contact-container {
@@ -966,3 +989,4 @@ flex: 1 1 100%;
 }
 
 }
+
