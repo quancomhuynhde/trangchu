@@ -110,4 +110,26 @@ menuItems.forEach(item => {
         }
         window.addEventListener('scroll', checkVisible);
         window.addEventListener('load', checkVisible);
+  function checkOpenHours() {
+    const now = new Date();
+    const hour = now.getHours();
+    const statusEl = document.getElementById("status");
+
+    // Trong khoảng 10h - 19h
+    if (hour >= 10 && hour < 19) {
+      statusEl.textContent = "Mở Cửa";
+      statusEl.classList.add("open");
+      statusEl.classList.remove("close");
+    } else {
+      statusEl.textContent = "Đóng Cửa";
+      statusEl.classList.add("close");
+      statusEl.classList.remove("open");
+    }
+  }
+
+  // Gọi ngay khi load
+  checkOpenHours();
+
+  // Cập nhật mỗi phút (phòng trường hợp khách mở web lâu)
+  setInterval(checkOpenHours, 60000);
 
