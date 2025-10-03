@@ -725,11 +725,10 @@ color: red;
 }
 
 .opening-hours h2 {
-  font-size: 28px;
-  color: #8b4513;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+margin-bottom: 20px;
+color: brown;
+font-size: 30px;
+text-transform: uppercase;
 }
 
 .hours-box {
@@ -1050,6 +1049,7 @@ flex: 1 1 100%;
 }
 
 }
+
 
 
 
