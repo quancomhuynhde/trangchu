@@ -720,7 +720,6 @@ color: red;
   border: 2px solid #b22222;
 }
 .opening-hours {
-  background: linear-gradient(135deg, #fff7e6, #ffe4c4); /* nền ấm áp */
   padding: 50px 0;
   text-align: center;
 }
@@ -1051,5 +1050,6 @@ flex: 1 1 100%;
 }
 
 }
+
 
 
