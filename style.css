@@ -699,30 +699,92 @@ padding: 0 10px;
 .promo-card strong {
 color: red;
 }
-/* Section thời gian bán cơm */
+.status {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.status.open {
+  background: #d4f8d4;
+  color: #2e8b57;
+  border: 2px solid #2e8b57;
+}
+
+.status.close {
+  background: #fbdada;
+  color: #b22222;
+  border: 2px solid #b22222;
+}
 .opening-hours {
-  background-color: #fdf5e6; /* nền nhạt, hoặc bạn chọn màu phù hợp trang */
-  padding: 40px 0;
+  background: linear-gradient(135deg, #fff7e6, #ffe4c4); /* nền ấm áp */
+  padding: 50px 0;
   text-align: center;
 }
 
 .opening-hours h2 {
   font-size: 28px;
-  color: #8b4513; /* màu nâu đất cho hợp với cơm/quán ăn */
-  margin-bottom: 12px;
+  color: #8b4513;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.opening-hours p {
-  font-size: 20px;
-  color: #333;
+.hours-box {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 20px 35px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-clip: padding-box;
+}
+
+.hours-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px; 
+  background: linear-gradient(45deg, #ff9966, #ff5e62);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.hours-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.hours-box .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ff5e62;
+}
+
+.hours-box p {
+  font-size: 18px;
   margin: 0;
+  color: #444;
 }
 
-.opening-hours .hours {
+.hours-box .hours {
+  display: block;
+  font-size: 24px;
   font-weight: bold;
-  color: #b22222; /* hoặc màu nổi bật hơn */
+  margin-top: 8px;
+  color: #b22222;
+  letter-spacing: 1px;
 }
-
 /* Container chính */
 .contact-container {
 display: flex;
@@ -989,4 +1051,5 @@ flex: 1 1 100%;
 }
 
 }
+
 
