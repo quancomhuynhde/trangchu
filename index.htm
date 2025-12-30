@@ -442,8 +442,8 @@
 <style>
 .tet-section {
   position: fixed;
-  inset: 0;               /* phủ toàn bộ màn hình */
-  pointer-events: none;   /* không cản click web */
+  inset: 0;
+  pointer-events: none;
   overflow: hidden;
   z-index: 9999;
 }
@@ -452,7 +452,8 @@
 .tet-item {
   position: absolute;
   top: -60px;
-  font-size: 32px;
+  font-size: 24px;
+  will-change: transform, opacity;
   animation: fall linear forwards;
 }
 
@@ -466,24 +467,43 @@
 
 <script>
 const section = document.querySelector(".tet-section");
-const items = ["🧧"];
+
+const MAX_ITEMS = 6;          // tối đa bao trên màn hình
+const CREATE_DELAY = 1400;    // tần suất tạo
+
+let timer;
 
 function createTetItem() {
+  if (section.children.length >= MAX_ITEMS) return;
+
   const item = document.createElement("div");
   item.className = "tet-item";
   item.innerText = "🧧";
 
   item.style.left = Math.random() * window.innerWidth + "px";
-  item.style.fontSize = 16 + Math.random() * 16 + "px";
-
-  item.style.animationDuration = 5 + Math.random() * 5 + "s";
+  item.style.fontSize = 16 + Math.random() * 12 + "px";
+  item.style.animationDuration = 6 + Math.random() * 4 + "s";
 
   section.appendChild(item);
 
-  setTimeout(() => item.remove(), 12000);
+  item.addEventListener("animationend", () => item.remove());
 }
 
-setInterval(createTetItem, 1200);
+function startEffect() {
+  timer = setInterval(createTetItem, CREATE_DELAY);
+}
+
+function stopEffect() {
+  clearInterval(timer);
+}
+
+/* Tự dừng khi tab bị ẩn */
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) stopEffect();
+  else startEffect();
+});
+
+startEffect();
 </script>
 
   <!-- Footer -->
@@ -498,6 +518,7 @@ setInterval(createTetItem, 1200);
 
 
 </html>
+
 
 
 
