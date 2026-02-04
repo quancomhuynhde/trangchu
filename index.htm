@@ -437,58 +437,58 @@
 
     </div>
   </section>
-/* Thông báo nghỉ Tết */
-    <style>
+<!-- POPUP -->
+<div id="popupThongBao">
+  <div class="popup">
+    <button class="close-btn-thongbao" onclick="closeThongBao()">×</button>
+    <img src="img/thongbao-tet.jpg">
+  </div>
+</div>
 
-    /* Nền mờ */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+<style>
+#popupThongBao {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
 
-    /* Khung popup */
-    .popup {
-      position: relative;
-      background: #fff;
-      border-radius: 10px;
-      padding: 10px;
-      max-width: 90%;
-      animation: zoomIn 0.3s ease;
-    }
+.popup {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
 
-    /* Ảnh */
-    .popup img {
-      max-width: 100%;
-      border-radius: 8px;
-      display: block;
-    }
+.popup img {
+  max-width: 100%;
+  border-radius: 8px;
+}
 
-    /* Nút tắt */
-    .close-btn-thongbao {
-      position: absolute;
-      top: -12px;
-      right: -12px;
-      background: red;
-      color: #fff;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      font-size: 20px;
-    }
+.close-btn-thongbao {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: red;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+</style>
 
-    @keyframes zoomIn {
-      from { transform: scale(0.7); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-  </style>
-  /* Bao lì xì rơi */
+<script>
+function closeThongBao() {
+  document.getElementById("popupThongBao").style.display = "none";
+}
+</script>
+
 <section class="tet-section"></section>
 
 <style>
@@ -570,6 +570,7 @@ startEffect();
 
 
 </html>
+
 
 
 
