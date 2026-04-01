@@ -1048,8 +1048,14 @@ flex: 1 1 45%;
 flex: 1 1 100%;
 }
 
-}
-
+} 
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+  }
 
 
 
