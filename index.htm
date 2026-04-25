@@ -437,11 +437,12 @@
 
     </div>
   </section>
-  <!-- POPUP -->
+
+ <!-- POPUP -->
 <div id="popupThongBao">
   <div class="popup">
     <button class="close-btn-thongbao" onclick="closeThongBao()">×</button>
-    <img src="img/thongbao-tet.jpg" alt="Thông báo Tết">
+    <img src="img/Nghile30.png">
   </div>
 </div>
 
@@ -450,17 +451,10 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10000;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-#popupThongBao.show {
-  display: flex;
-  opacity: 1;
 }
 
 .popup {
@@ -468,18 +462,11 @@
   background: #fff;
   padding: 10px;
   border-radius: 10px;
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-}
-
-#popupThongBao.show .popup {
-  transform: scale(1);
 }
 
 .popup img {
   max-width: 100%;
   border-radius: 8px;
-  display: block;
 }
 
 .close-btn-thongbao {
@@ -498,32 +485,9 @@
 </style>
 
 <script>
-// Hiển thị popup (chỉ 1 lần)
-window.addEventListener("load", function () {
-  if (!localStorage.getItem("popupDaXem")) {
-    const popup = document.getElementById("popupThongBao");
-    popup.classList.add("show");
-  }
-});
-
-// Đóng popup
 function closeThongBao() {
-  const popup = document.getElementById("popupThongBao");
-  popup.classList.remove("show");
-
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 400);
-
-  localStorage.setItem("popupDaXem", "true");
+  document.getElementById("popupThongBao").style.display = "none";
 }
-
-// Click ra ngoài để đóng
-document.getElementById("popupThongBao").addEventListener("click", function (e) {
-  if (e.target === this) {
-    closeThongBao();
-  }
-});
 </script>
 
 <section class="tet-section"></section>
