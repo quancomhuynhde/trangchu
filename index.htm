@@ -437,6 +437,70 @@
 
     </div>
   </section>
+  
+  <section class="popup">
+
+  <!-- Ô thông báo -->
+  <div class="card" id="open">
+    🇻🇳 LỊCH NGHỈ<br>
+    30/4 – 1/5
+  </div>
+
+  <!-- Popup -->
+  <div class="overlay" id="box">
+    <div class="content">
+      <span id="close">&times;</span>
+      <h3>Thông báo nghỉ lễ</h3>
+      <p>30/4 & 1/5 nghỉ 2 ngày</p>
+      <small>Làm việc lại: 02/05</small>
+    </div>
+  </div>
+
+</section>
+
+<style>
+.card{
+  width:220px;
+  padding:20px;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#ff4d4d,#ff9900);
+}
+
+.overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  justify-content:center;
+  align-items:center;
+}
+.overlay.show{display:flex;}
+
+.content{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  position:relative;
+}
+
+#close{
+  position:absolute;
+  top:5px;
+  right:10px;
+  cursor:pointer;
+}
+</style>
+
+<script>
+open.onclick = ()=> box.classList.add("show");
+close.onclick = ()=> box.classList.remove("show");
+box.onclick = e => e.target==box && box.classList.remove("show");
+</script>
   <!-- Footer -->
 <p class="footer">© <span id="year"></span> Quán Cơm Huynh Đệ. All rights reserved.</p>
 
