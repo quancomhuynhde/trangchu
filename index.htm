@@ -438,61 +438,6 @@
     </div>
   </section>
 
- <!-- POPUP -->
-<div id="popupThongBao">
-  <div class="popup">
-    <button class="close-btn-thongbao" onclick="closeThongBao()">×</button>
-    <img src="img/Nghile30.png">
-  </div>
-</div>
-
-<style>
-#popupThongBao {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-}
-
-.popup {
-  position: relative;
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.popup img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.close-btn-thongbao {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  background: red;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-</style>
-
-<script>
-function closeThongBao() {
-  document.getElementById("popupThongBao").style.display = "none";
-}
-</script>
-
-<section class="tet-section"></section>
-
-
   <!-- Footer -->
 <p class="footer">© <span id="year"></span> Quán Cơm Huynh Đệ. All rights reserved.</p>
 
